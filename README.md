@@ -1,3 +1,135 @@
+# Task Management System
+
+Introduction
+This is a Task Management System designed to help users efficiently manage their tasks. It features a modern front-end built with React and a robust back-end powered by Spring Boot. Users can add tasks, mark them as completed, and delete tasks. All changes are persisted on the backend to ensure data consistency.
+
+Features
+Add Tasks: Users can create and add tasks.
+Mark as Completed: Users can check off tasks once they’re done.
+Delete Tasks: Unnecessary tasks can be deleted.
+Persistent Data: Task data is stored and managed in the Spring Boot backend.
+Interactive UI: A dynamic and responsive front-end built with React.
+Technologies Used
+Frontend:
+
+React
+Axios (for API requests)
+HTML5, CSS3
+Backend:
+
+Spring Boot
+RESTful APIs
+Database:
+
+H2 Database (or any other configured RDBMS)
+Installation
+Prerequisites
+Node.js and npm installed
+Java Development Kit (JDK) installed
+Maven installed (optional)
+Database (H2 included by default)
+Backend Setup
+Clone the Repository
+
+bash
+Copy code
+git clone https://github.com/your-username/task-management-backend.git  
+Navigate to the Backend Directory
+
+bash
+Copy code
+cd task-management-backend  
+Run the Application
+
+Use Maven to build and run the project:
+bash
+Copy code
+mvn spring-boot:run  
+The backend will start on http://localhost:8080.
+Database Configuration
+
+By default, H2 Database is used. You can change the database configuration in application.properties:
+properties
+Copy code
+spring.datasource.url=jdbc:h2:mem:taskdb  
+spring.datasource.username=sa  
+spring.datasource.password=  
+Frontend Setup
+Clone the Repository
+
+bash
+Copy code
+git clone https://github.com/your-username/task-management-frontend.git  
+Navigate to the Frontend Directory
+
+bash
+Copy code
+cd task-management-frontend  
+Install Dependencies
+
+bash
+Copy code
+npm install  
+Run the Application
+
+bash
+Copy code
+npm start  
+The front-end will start on http://localhost:3000.
+Usage
+Add Task
+Enter a task description and click the "Add" button.
+
+Mark as Completed
+Click on the checkbox next to a task to mark it as done.
+
+Delete Task
+Click the "Delete" button next to a task to remove it.
+
+Persistent Data
+All operations reflect in the backend and are stored in the database.
+
+Folder Structure
+Frontend (task-management-frontend)
+bash
+Copy code
+/src  
+│  
+├── /components           # React components (e.g., TaskList, TaskItem)  
+├── /services             # API calls using Axios  
+├── App.js                # Main React component  
+└── index.js              # Entry point  
+Backend (task-management-backend)
+bash
+Copy code
+/src/main/java/com/example/taskmanagement  
+│  
+├── /controller           # REST API endpoints  
+├── /service              # Business logic  
+├── /repository           # Database interactions  
+├── /entity               # Task entity class  
+└── Application.java      # Main Spring Boot application  
+API Endpoints
+Method	Endpoint	Description
+GET	/api/tasks	Get all tasks
+POST	/api/tasks	Add a new task
+PUT	/api/tasks/:id	Mark task as completed
+DELETE	/api/tasks/:id	Delete a task
+Future Enhancements
+User Authentication: Allow users to register and manage their tasks.
+Task Categories: Group tasks by categories or tags.
+Advanced Filters: Filter tasks by completion status or due date.
+Mobile App Support: Extend functionality to mobile platforms.
+License
+This project is licensed under the MIT License.
+
+Contact
+For any questions or suggestions, please contact:
+K. Umesh Raju
+Email: umeshraju82905@gmail.com
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
